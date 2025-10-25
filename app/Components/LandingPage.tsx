@@ -17,7 +17,7 @@ const LandingPage = () => {
         <div className="  relative ">
           <div className="absolute top-30 right-30 w-16 h-16 bg-green-200 rounded-full opacity-50 blur-sm "></div>
           <h1
-            className={`${bellefair.className} font-bold text-[60px] text-center`}
+            className={` font-bold text-[60px] text-center`}
           >
             ONE SYSTEM. EVERY TICKET. <br />{" "}
             <span className="text-green-500">ZERO</span> STRESS.
@@ -49,13 +49,13 @@ const LandingPage = () => {
 
       <section className="flex flex-col py-10">
         <h2 className={` text-2xl text-center`}>
-          TRUSTED BY
+          Trusted by
         </h2>
         <AutoScroll />
       </section>
       <section className="flex flex-col gap-5 items-center padding-container ">
         <h2 className={` text-2xl text-center `}>
-          EVERYTHING YOU NEED IN ONE APP
+          Everything you need in one app
         </h2>
         <div className="flex gap-5">
           <div className="w-[60%] shadow-[0_3px_8px_#05df72] flex gap-5 p-5 rounded-2xl">
@@ -132,7 +132,7 @@ const LandingPage = () => {
       </section>
       <section className="mt-5">
         <h2 className={`text-2xl  text-center`}>
-          WHAT OUR USERS SAY
+          What Our Users Say
         </h2>
         <div className="flex gap-4 justify-center p-4">
           <TestimonialCard />

@@ -5,7 +5,12 @@ import { useRouter } from 'next/navigation'
 
 const page = () => {
     const router = useRouter();
-    const [session, setSession] = useState(null);
+    const [session, setSession] = useState<Session | null>(null);
+
+    interface Session {
+        fullname: string;
+        email: string;
+    }
 
     useEffect(()=> {
         const sessionData = getSession();

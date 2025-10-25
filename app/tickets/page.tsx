@@ -15,7 +15,6 @@ export default function Tickets() {
   const [selectedTicket, setSelectedTicket] = useState<any>(null);
   const [isConfirmModalOpen, setIsConfirmModalOpen] = useState(false);
   const [ticketToDelete, setTicketToDelete] = useState<string | null>(null);
-
   useEffect(() => {
     const sessionData = getSession();
     if (!sessionData) {

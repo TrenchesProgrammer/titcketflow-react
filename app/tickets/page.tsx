@@ -9,8 +9,7 @@ import ConfirmationModal from "../Components/ConfirmationModal";
 
 export default function Tickets() {
   const router = useRouter();
-  const session = getSession();
-
+  const [session, setSession] = useState<any>(null);
   const [tickets, setTickets] = useState<any[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedTicket, setSelectedTicket] = useState<any>(null);
@@ -18,10 +17,14 @@ export default function Tickets() {
   const [ticketToDelete, setTicketToDelete] = useState<string | null>(null);
 
   useEffect(() => {
-    if (!session) return router.push("/login");
-
-    const saved = localStorage.getItem("ticketapp_tickets");
-    setTickets(saved ? JSON.parse(saved) : []);
+    const sessionData = getSession();
+    if (!sessionData) {
+      router.push("/login");
+    } else {
+      setSession(sessionData);
+      const saved = localStorage.getItem("ticketapp_tickets");
+      setTickets(saved ? JSON.parse(saved) : []);
+    }
   }, []);
 
   const handleAddTicket = (title: string, description: string) => {

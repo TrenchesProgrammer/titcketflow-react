@@ -1,0 +1,22 @@
+[
+    {
+        "question": "How do I submit a new ticket?",
+        "answer": "You can submit a new ticket by navigating to the \"Submit Ticket\" section and filling out the required information, including the issue description, priority, and any relevant attachments."
+    },
+    {
+        "question": "How can I check the status of my existing tickets?",
+        "answer": "To check the status of your tickets, go to the \"My Tickets\" or \"Dashboard\" section. You will see a list of all your submitted tickets along with their current status (e.g., Open, In Progress, Resolved, Closed)."
+    },
+    {
+        "question": "Can I add more information to an already submitted ticket?",
+        "answer": "Yes, you can add comments or attachments to an existing ticket. Navigate to the ticket details page and use the \"Add Comment\" or \"Attach File\" options."
+    },
+    {
+        "question": "What should I do if my ticket is not resolved within the expected timeframe?",
+        "answer": "If your ticket is taking longer than expected, you can escalate it through the system or contact support directly, referencing your ticket number."
+    },
+    {
+        "question": "How do I close a ticket?",
+        "answer": "Once your issue is resolved, you can close the ticket from its details page. You may also be prompted to provide feedback on the resolution."
+    }
+]

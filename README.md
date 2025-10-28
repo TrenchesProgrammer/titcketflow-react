@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TicketFlow - React (Next.js) Implementation
+
+This is the React version of the TicketFlow application, a multi-framework ticket management web app.
+
+## Frameworks and Libraries
+
+*   **Framework:** [Next.js](https://nextjs.org/) (A React framework)
+*   **UI Components:** [Mantine](https://mantine.dev/)
+*   **Icons:** [Tabler Icons](https://tabler-icons.io/), [React Icons](https://react-icons.github.io/react-icons/)
+*   **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+*   **Language:** [TypeScript](https://www.typescriptlang.org/)
+*   **Linting:** [ESLint](https://eslint.org/)
+*   **Mock API:** [JSON Server](https://github.com/typicode/json-server)
 
 ## Getting Started
 
-First, run the development server:
+To get a local copy up and running, follow these simple steps.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+You need to have Node.js and npm (or yarn/pnpm) installed on your machine.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1.  Clone the repo
+    ```sh
+    git clone https://github.com/your_username/ticket-flow-react.git
+    ```
+2.  Install NPM packages
+    ```sh
+    npm install
+    ```
 
-## Learn More
+### Running the Application
 
-To learn more about Next.js, take a look at the following resources:
+You need to run two commands in separate terminals:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1.  **Start the mock API:**
+    ```sh
+    npm run json-server
+    ```
+    This will start a server on `http://localhost:3001`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2.  **Start the development server:**
+    ```sh
+    npm run dev
+    ```
+    Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Deploy on Vercel
+## Authentication
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+You can sign up with any email and password. The application uses `localStorage` for user and session management, so no real authentication is performed.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Available Scripts
+
+In the project directory, you can run:
+
+*   `npm run dev`: Runs the app in the development mode.
+*   `npm run build`: Builds the app for production to the `.next` folder.
+*   `npm run start`: Starts a Next.js production server.
+*   `npm run lint`: Runs ESLint to find and fix problems in your code.
+*   `npm run json-server`: Starts the mock JSON server.

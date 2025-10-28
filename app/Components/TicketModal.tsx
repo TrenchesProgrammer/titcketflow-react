@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { showNotification } from "@mantine/notifications";
 
 interface TicketModalProps {
   onClose: () => void;
@@ -13,7 +14,18 @@ const TicketModal: React.FC<TicketModalProps> = ({ onClose, onAddTicket }) => {
   const handleSubmit = () => {
     if (title.trim() && description.trim()) {
       onAddTicket(title, description);
+      showNotification({
+        title: "Ticket Added",
+        message: "Your ticket has been added successfully.",
+        color: "green",
+      });
       onClose();
+    } else {
+      showNotification({
+        title: "Error",
+        message: "Please fill in both title and description.",
+        color: "red",
+      });
     }
   };
 
@@ -39,7 +51,7 @@ const TicketModal: React.FC<TicketModalProps> = ({ onClose, onAddTicket }) => {
           <button onClick={onClose} className="bg-gray-300 text-black px-4 py-2 rounded">
             Cancel
           </button>
-          <button onClick={handleSubmit} className="bg-black text-white px-4 py-2 rounded">
+          <button onClick={handleSubmit} className="bg-green-400 text-white px-4 py-2 rounded">
             Add Ticket
           </button>
         </div>

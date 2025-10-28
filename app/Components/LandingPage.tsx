@@ -53,31 +53,17 @@ const LandingPage = () => {
       <section className="flex flex-col gap-5 items-center padding-container">
         <h2 className={`text-2xl text-center`}>Everything you need in one app</h2>
         <div className="flex flex-col md:flex-row gap-5 w-full">
-          <div className="w-full md:w-3/5 border border-green-200 flex flex-col sm:flex-row gap-5 p-5 rounded-2xl">
+          <div className="w-full md:w-1/2 border border-green-200 flex flex-col sm:flex-row gap-5 p-5 rounded-2xl">
             <div className="flex-1">
               <h3>Insights & Analytics</h3>
               <p>Make informed decisions with visual analytics that show productivity and progress.</p>
             </div>
-            <Image
-              className="w-full sm:w-1/3 h-auto rounded-lg"
-              src="/analytics.png"
-              alt="analytics"
-              height={400}
-              width={250}
-            />
           </div>
-          <div className="w-full md:w-2/5 border border-green-200 flex flex-col sm:flex-row gap-5 p-5 rounded-2xl">
+          <div className="w-full md:w-1/2 border border-green-200 flex flex-col sm:flex-row gap-5 p-5 rounded-2xl">
             <div className="flex-1">
               <h3>Task Management</h3>
               <p>Organize and prioritize your team’s work with a clear, shared view of all tickets.</p>
             </div>
-            <Image
-              className="w-full sm:w-1/3 h-auto rounded-lg"
-              src="/analytics.png"
-              alt="analytics"
-              height={400}
-              width={250}
-            />
           </div>
         </div>
 
@@ -87,26 +73,12 @@ const LandingPage = () => {
               <h3>Real-Time Updates</h3>
               <p>Stay in the loop with instant notifications and a live activity feed.</p>
             </div>
-            <Image
-              className="w-full sm:w-1/3 h-auto rounded-lg"
-              src="/analytics.png"
-              alt="analytics"
-              height={400}
-              width={250}
-            />
           </div>
           <div className="w-full md:w-3/5 border border-green-200 flex flex-col sm:flex-row gap-5 p-5 rounded-2xl">
             <div className="flex-1">
               <h3>Customizable Workflows</h3>
               <p>Adapt the system to your team’s unique process with custom fields and statuses.</p>
             </div>
-            <Image
-              className="w-full sm:w-1/3 h-auto rounded-lg"
-              src="/analytics.png"
-              alt="analytics"
-              height={400}
-              width={250}
-            />
           </div>
         </div>
       </section>
@@ -123,7 +95,7 @@ const LandingPage = () => {
           <TestimonialCard />
         </div>
       </section>
-      <footer className="padding-container">
+      <footer className="padding-container mt-15">
         <Footer/>
       </footer>
     </div>

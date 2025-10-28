@@ -4,6 +4,7 @@ import { useState } from "react";
 import { login } from "../utils/auth";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { showNotification } from "@mantine/notifications";
 
 const LoginPage = () => {
   const router = useRouter();
@@ -39,9 +40,19 @@ const LoginPage = () => {
 
     if (!result.success) {
       setErrors({ ...errors, general: result.message });
+      showNotification({
+        title: "Login Failed",
+        message: result.message,
+        color: "red",
+      });
       return;
     }
 
+    showNotification({
+      title: "Login Successful",
+      message: "You have been successfully logged in.",
+      color: "green",
+    });
     router.push("/dashboard");
   };
 
@@ -116,5 +127,4 @@ const LoginPage = () => {
     </div>
   );
 };
-
 export default LoginPage;

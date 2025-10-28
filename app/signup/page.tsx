@@ -4,6 +4,7 @@ import { useState } from "react";
 import { signup } from "../utils/auth";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { showNotification } from "@mantine/notifications";
 
 const SignupPage = () => {
   const router = useRouter();
@@ -50,9 +51,19 @@ const SignupPage = () => {
 
     if (!result.success) {
       setErrors({ ...errors, general: result.message });
+      showNotification({
+        title: "Signup Failed",
+        message: result.message,
+        color: "red",
+      });
       return;
     }
 
+    showNotification({
+      title: "Signup Successful",
+      message: "Your account has been created successfully.",
+      color: "green",
+    });
     router.push("/dashboard");
   };
 

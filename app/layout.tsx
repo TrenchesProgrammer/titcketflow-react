@@ -4,12 +4,14 @@ import "./globals.css";
 import Navbar from "./Components/Navbar";
 import { MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
+import { Notifications } from "@mantine/notifications";
+import "@mantine/notifications/styles.css";
 
 
 
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "700"]
 });
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -28,6 +30,7 @@ export default function RootLayout({
       >
         <Navbar/>
         <MantineProvider>
+          <Notifications />
           {children}
         </MantineProvider>
       </body>
